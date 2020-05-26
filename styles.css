@@ -1,0 +1,275 @@
+.background {    background-color: black;
+
+    background-image: url('resources/paper.jpg');
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat; 
+    opacity: 0.8; 
+}
+
+body{font-family: monospace, sans-serif;
+    width: 100%;
+    height: 100%; 
+    background-color: #5f5f5f;
+    position: absolute;
+    }
+
+h1 {position: absolute;
+    width: 100%;
+margin: auto;
+font-weight: 600;
+left: 24px;
+right: 0;
+top: 4px; 
+font-size: 6vw;
+opacity: 0.8}
+
+h2 {position: relative;
+    width: 100%;
+margin: auto;
+left: 24px;
+right: 0;
+top: 4.8vw;
+font-weight: 400;
+font-size: 4vw;
+opacity: 0.}
+
+h6 {position: absolute;
+    top:570px;
+    left:320px;
+    color: #2f2f2f;
+    opacity: 0.8;
+    width: 220px;
+    }
+
+.sig {position: absolute;
+    bottom:-45px;
+    left:87px;
+    color: black;
+}
+
+
+.container {position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 500px;
+    height: 800px; 
+    top: 220px;
+}
+
+.menu {position: absolute;
+display: grid;
+grid-template-columns: 1fr 1fr;
+width: 500px; 
+height:60px; 
+left: 20px;
+top: 5px;
+color: black;
+z-index: 0;
+opacity: 1;
+}
+
+.tab {
+    overflow: hidden;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none; 
+    cursor: pointer;
+    transition: 0.3s;
+    border-bottom: 50px solid #e3d9bd;
+    border-right: 25px solid transparent;
+    border-top-left-radius: 44px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 6px;
+    position: relative;
+    opacity: 0.3;
+    top: 3px;
+    z-index: 3;
+
+}
+
+.tab button:hover {
+    border-bottom: 50px solid #1f1f1f;
+}
+
+.tab button.active {
+    border-bottom: 50px solid #1f1f1f;
+
+
+}
+
+.tabContent {
+    padding: 6px 6px;
+    border: .5px solid #1f1f1f;
+    border-top-left-radius: none;
+    border-top-right-radius: 6px; 
+    border-bottom-left-radius: 6px; 
+    border-bottom-right-radius: 6px; 
+    color: black;
+    height: 520px;
+    background-color: #F9F5E3;
+    background-image: url('resources/card2.png');
+    background-size: 108%;
+    opacity: 0.8;
+    box-shadow: 2px 2px 8px;
+
+}
+
+.tabLinks {
+    width: 249px;
+}
+
+
+#input {display: grid;
+    grid-template-rows: 160px 240px 100px;
+    grid-template-columns: 135px 137px 135px 89px;
+    grid-template-areas: 
+    "dummy dummy dummy dummy"
+    "title author pages read"
+    "button button button button";
+    height: 520px;
+}
+
+#list {display: grid;
+    grid-template-rows: 160px 42px 320px;
+    grid-template-columns: 135px 137px 135px 50px 39px;
+    grid-template-areas: 
+    "dummy dummy dummy dummy dummy"
+    "title author pages read trash"
+    "table table table table table";
+    height: 520px;
+    }
+
+
+.dummy {grid-area:dummy;
+text-align: center;
+font-size: 24px;
+font-weight: 600;
+top:30px;
+position: relative;}
+.title {grid-area: title};
+.author {grid-area: author};
+.pages {grid-area: pages}
+.read {grid-area: read}
+.btn {grid-area: button;
+    display: block;
+    text-align: center;
+}
+
+.entry {text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    top:28px;
+    position: relative;
+    border: 1px solid black;
+    background-color: #F9F5E3;
+    color: black;
+    opacity: 1;
+    margin: auto;
+    left: -11px;
+    right: 0;
+    transform: translateY(3px);
+    opacity: 0.8; 
+}
+
+.entry:hover {
+    cursor: pointer;
+}
+
+.entry:active {
+    background: #e5e5e5;
+    outline: none;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+       -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+            box-shadow: inset 0px 0px 5px #c1c1c1;
+  }
+
+.entry:focus {
+    outline: none;
+}
+
+.input {font-family: monospace, sans-serif;
+font-size: 10px;
+position: absolute;
+top: 267px;
+background-color: #F9F5E3;
+border: none;
+border-radius: 5%;
+width: 117px;
+height: 16px;
+}
+
+#read {font-family: monospace, sans-serif;
+    font-size: 10px;
+    position: relative;
+    top: -4px; 
+}
+
+select {position: relative;
+top: -4px;
+background-color: #F9F5E3}
+
+.tableContainer {overflow-y: auto;
+    overflow-x: hidden;
+    grid-area: table;
+    scrollbar-color: light;
+
+    }
+
+.tableList {width: 545px;
+
+}
+
+tr {font-size: 10px; 
+    height: 30px;
+    ;
+}
+td {overflow: hidden;
+    text-overflow: ellipsis; 
+    padding: 0px 10px 0px 0px;
+    font-weight: 600;
+    color: #1f1f1f;
+    font-size: 10.5px;
+    position: relative;
+    top: -2px;
+}
+
+/* nth-child(1) = the first td in each tr */
+td:nth-child(1) {
+    width: 120px;    
+    }
+  
+  /* the second */
+  td:nth-child(2) {
+    width: 124px;
+
+  }
+  
+  /* the third */
+  td:nth-child(3) {
+    width: 128px;
+   }
+
+   td:nth-child(4) {
+    width: 27px;
+   }
+
+
+   td:nth-child(5) {
+    width: 39px;
+   }
+
+button {font-family: monospace, sans-serif;
+    font-size: 9px;
+    position: relative;
+    top: 8px; 
+    background-color: #cc6666;
+}
+
+.delete {
+grid-area: trash}

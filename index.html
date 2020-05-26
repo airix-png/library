@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+</style>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Library</title>
+</head>
+<body>
+    <div class = "background"><h1>THE/LIBRARY</h1><br>
+    <h2>PQ <br>
+    4763<br>
+    .E823<br>
+    2020</h2></div>
+<div class = "container"><h6>Design + Code | Ping Quach
+    <br> <img class=sig src="resources/signature.png" width="100">
+</h6>
+<div class = "menu"> 
+    <p> ADD BOOK </p>
+    <p> BOOK CATALOGUE </p>
+
+</div>
+<div class = "tab">
+    <button class="tabLinks" onclick="openLibrary(event, 'input')" id = "defaultOpen"></button>
+    <button class="tabLinks" onclick="openLibrary(event, 'list')"></button>
+
+</div>
+<div id = "input" class = "tabContent">
+    <div class = "dummy"> 
+    </div>
+    <div class = "title">    
+        <p> TITLE: </p>
+        <input type ="text" class = input id = "title"  placeholder = " Crime & Punishment">
+        
+    </div>
+    <div class = "author"> 
+        <p> AUTHOR: </p>   
+        <input type ="text" class = input id = "author" placeholder = " Fyodor Dostoyevsky">
+    </div>
+    <div class = "pages">    
+        <p> PAGES: </p>
+        <input type = "text" class = input id = "pages" placeholder = "671">
+    </div>
+    <div class = "btn">
+        <button type = "submit" class = "entry" onclick ="addBook();"> SAVE CHANGES </button>
+    </div>
+    <div class = "read">   
+        <label class="checkbox" for="read"><p>READ?:</p>
+            <input type="checkbox" class="check" id = "read"> </select>
+    </div>
+</div>
+<div id = "list" class = "tabContent">
+    <div class = "dummy"> 
+    </div>
+    <div class = "title"> 
+        <p>TITLE:</p>
+    </div>
+    <div class = "author"> 
+        <p>AUTHOR:</p>
+    </div>
+    <div class = "pages"> 
+        <p>PAGES:</p>
+    </div>
+    <div class = "read"> 
+        <p>READ?:</p>
+    </div>
+    <div class ="tableContainer">
+        <table class ="tableList">
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    </div>
+</div>
+</div>
+
+</body>
+<script src="script.js"></script>
+
+
+
+
+</html>
